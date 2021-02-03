@@ -7,7 +7,7 @@
   <div *ngIf="searchedItemList?.length > 0">
     <h3>Searched item list</h3>
 
-    <div class="container">
+    <div>
       <div class="row">
         <div class="col-sm">
           <li *ngFor="let result of searchedItemList; let i = index">
@@ -30,7 +30,7 @@
         </div>
     </div>
     <h3>No of searched item list = {{searchedItemList.length}}</h3>
-    <table style="width:100%" *ngFor="let result of searchedItemList; let j = index">
+    <table style="width:100%" *ngFor="let result of searchedItemList; let j = index" class="container">
       <tr>
         <th *ngIf="j === 0">Searched item</th>
         <th *ngIf="j === 0">Location</th>

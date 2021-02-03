@@ -4,6 +4,9 @@ table, th, td {
   text-align: center;
   width: 60%;
 }
+table{
+  padding-bottom: 20px;
+}
 #chartjs-container{
   display: block;
   // width: 40px;
@@ -17,4 +20,6 @@ input{
   width: 50%;
   margin-left: 20px;
 }
-
+li{
+  margin-left: 20px;
+}
