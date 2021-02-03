@@ -23,6 +23,18 @@
       </tr>
     </table>
   </div>
+  <div class="chartjs-container" *ngIf="searchedItemList?.length > 0">
+    <canvas
+        baseChart
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins"
+        [colors]="pieChartColors"
+        [legend]="pieChartLegend">
+    </canvas>
+</div>
 
 </div>
 
