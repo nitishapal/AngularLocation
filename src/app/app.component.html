@@ -1,15 +1,35 @@
 <div>
-  <h2>Search by Country Name</h2>
+  <h3>Search by Country Name</h3>
   <form [formGroup]="searchForm">
   <input #term type="text" (keyup)="search(term.value)" formControlName="searchinput" placeholder="Search country here" [value]="this.searchitem">
 </form>
   <hr>
   <div *ngIf="searchedItemList?.length > 0">
-    <h2>Searched item list</h2>
-    <li *ngFor="let result of searchedItemList; let i = index">
-    {{i+1}} . {{result.name}}
-    </li>
-    <h2>No of searched item list = {{searchedItemList.length}}</h2>
+    <h3>Searched item list</h3>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <li *ngFor="let result of searchedItemList; let i = index">
+            {{i+1}} . {{result.name}}
+            </li>
+        </div>
+        <div class="col-sm">
+          <div class="chartjs-container" *ngIf="searchedItemList?.length > 0">
+            <canvas style="height:10vh; width:10vw"
+                baseChart
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [chartType]="pieChartType"
+                [options]="pieChartOptions"
+                [plugins]="pieChartPlugins"
+                [colors]="pieChartColors"
+                [legend]="pieChartLegend">
+            </canvas>
+        </div>
+        </div>
+    </div>
+    <h3>No of searched item list = {{searchedItemList.length}}</h3>
     <table style="width:100%" *ngFor="let result of searchedItemList; let j = index">
       <tr>
         <th *ngIf="j === 0">Searched item</th>
@@ -22,19 +42,9 @@
       <tr>
       </tr>
     </table>
+
   </div>
-  <div class="chartjs-container" *ngIf="searchedItemList?.length > 0">
-    <canvas
-        baseChart
-        [data]="pieChartData"
-        [labels]="pieChartLabels"
-        [chartType]="pieChartType"
-        [options]="pieChartOptions"
-        [plugins]="pieChartPlugins"
-        [colors]="pieChartColors"
-        [legend]="pieChartLegend">
-    </canvas>
-</div>
+
 
 </div>
 

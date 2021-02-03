@@ -2,14 +2,19 @@ table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
   text-align: center;
-  width: 63px;
+  width: 60%;
 }
 #chartjs-container{
   display: block;
-  width: 40px;
-  height: 40px;
+  // width: 40px;
+  // height: 40px;
+  width: 20px; height: 20px
 }
-canvas{
-  width: 40px;
-  height: 40px;
+h3{
+  margin-left: 20px;
 }
+input{
+  width: 50%;
+  margin-left: 20px;
+}
+
