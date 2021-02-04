@@ -13,7 +13,7 @@ export class AppComponent {
   title = 'angularSearchLocation';
   results = [];
   searchForm: FormGroup;
-  searchitem: any = '';
+  searchitem: any = 'Placeholder for the Data returned from the API';
   searchedItemList: any = [];
 
 
@@ -58,7 +58,7 @@ export class AppComponent {
   // tslint:disable-next-line:member-ordering
   pieChartColors = [
     {
-      backgroundColor: ['rgba(255,0,0,0.3)', 'rgba(0,255,0,0.3)', 'rgba(0,0,255,0.3)'],
+      backgroundColor: ['#e6de10', '#47ba32', '#b025cc', '#de1021'],
     },
   ];
 

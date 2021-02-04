@@ -1,3 +1,30 @@
+.stats{
+  text-align: center;
+}
+textarea{
+  margin-left: 20px;
+}
+input{
+  width: 30%;
+  margin-left: 20px;
+}
+form{
+  margin-top: 32px;
+}
+button{
+  background: transparent;
+  border: 1px solid black;
+  width: 5vw;
+}
+.rowmargin{
+  margin-top: 32px;
+}
+.leftCol{
+  border-right: 1px solid #c6c3c3;
+}
+.nistNo{
+  margin-left: 20px;
+}
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
@@ -9,17 +36,12 @@ table{
 }
 #chartjs-container{
   display: block;
-  // width: 40px;
-  // height: 40px;
   width: 20px; height: 20px
 }
 h3{
   margin-left: 20px;
 }
-input{
-  width: 50%;
-  margin-left: 20px;
-}
+
 li{
-  margin-left: 20px;
+  background: #dedce3;
 }
