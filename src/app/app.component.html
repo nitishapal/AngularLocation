@@ -43,4 +43,29 @@
     </div>
   </div>
 
+  <!-- <table *ngFor="let item of dataList; let i = index">
+    <tr *ngIf="i === 0">
+      <th>Name</th>
+      <th>Email</th>
+      <th>Gender</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>{{item.name}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.gender}}</td>
+      <td [ngClass]="item.status === 'Active' ? 'greenBg' : ''">{{item.status}}</td>
+    </tr>
+  </table> -->
+   <header style=" background-color: blue;">
+     <nav>
+       <li class="headerClass">Angular</li>
+       <li class="headerClass">Feature</li>
+       <li class="headerClass">Docs</li>
+       <li class="headerClass">Resources</li>
+       <li class="headerClass">Events</li>
+       <li class="headerClass">Blogs</li>
+       <input type="text" class="searchInput" placeholder="Search" />
+     </nav>
+   </header>
   <router-outlet></router-outlet>

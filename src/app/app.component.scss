@@ -45,3 +45,16 @@ h3{
 li{
   background: #dedce3;
 }
+.greenBg{
+  background-color: green;
+}
+
+.headerClass{
+  display: inline-block; padding: 20px; color: white; background-color: blue;
+}
+.searchInput{
+  border-radius: 15px;
+  max-width: fit-content;
+  float: right;
+      margin-top: 16px;
+}

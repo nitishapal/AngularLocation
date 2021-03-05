@@ -16,6 +16,8 @@ export class AppComponent {
   searchitem: any = 'Placeholder for the Data returned from the API';
   searchedItemList: any = [];
 
+  dataList = [];
+
 
   pieChartOptions: ChartOptions = {
     responsive: true,
@@ -38,6 +40,7 @@ export class AppComponent {
     this.searchForm = this.formBuilder.group({
       searchinput: new FormControl('', [Validators.required]),
     });
+    this.grtData();
   }
 
   // tslint:disable-next-line:member-ordering
@@ -92,7 +95,68 @@ export class AppComponent {
   }
   }
 
+  grtData(){
+    // this.http.get('https://gorest.co.in/public-api/users').toPromise().then((res: any) => {
+    //   console.log(res.data);
+    //   this.dataList = res.data;
+    // }).catch((err: any) => {
+    //   console.log(err);
+    // })
 
+
+    var input =
+[
+	{"name": "Star Plus", "category": "Entertainment"},
+	{"name": "Star News", "category": "News"},
+	{"name": "Times Now", "category": "News"},
+]
+
+// var output
+
+// {
+// 	"News": ["Star News", "Times Now"],
+// 	"Entertainment": ["Star Plus"]
+// }
+
+
+let obj={};
+    for(let i=0; i<input.length; i++){
+    //  obj[input[i].category] = [input[i].name];
+    if(!obj[input[i].category]){
+      obj[input[i].category] = [input[i]['name']];
+    } else{
+      obj[input[i].category].push(input[i]['name']);
+    }
+    console.log(obj);
+}
+
+  }
+
+  // Input:   str = "a,b$c"
+  // Output:  str = "c,b$a"
+
+  // Input:   str = "Ab,c,de!$"
+  // Output:  str = "ed,c,bA!$"
+
+  // let str1 = str.split('');
+  // for(let i=str1.length-1; i>=0; i++){
+  //   if(!(str1[i].includes('!') || str1[i].includes('$'))){
+
+  //   }
+  // }
+
+
+  //DEVELOPER
+  // str1 = str.split('');
+  // for(let i=0; i<str1.length; i++){
+  //   let count = 0;
+  //   for(let j=0; j<str1.length; j++){
+  //     if(str1[i] === str1[j]){
+  //       count = count + 1;
+  //     }
+  //   }
+  //   console.log(str[i], count);
+  // }
 
 
 }
