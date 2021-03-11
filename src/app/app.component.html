@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <h3 class="stats">Stats</h3>
   <hr>
   <textarea id="textarea" name="coutry" rows="4" cols="90" [value]="this.searchitem">
@@ -41,7 +41,7 @@
         </tr>
       </table>
     </div>
-  </div>
+  </div> -->
 
   <!-- <table *ngFor="let item of dataList; let i = index">
     <tr *ngIf="i === 0">
@@ -57,7 +57,7 @@
       <td [ngClass]="item.status === 'Active' ? 'greenBg' : ''">{{item.status}}</td>
     </tr>
   </table> -->
-   <header style=" background-color: blue;">
+   <!-- <header style=" background-color: blue;">
      <nav>
        <li class="headerClass">Angular</li>
        <li class="headerClass">Feature</li>
@@ -67,5 +67,12 @@
        <li class="headerClass">Blogs</li>
        <input type="text" class="searchInput" placeholder="Search" />
      </nav>
-   </header>
+   </header> -->
+
+   <input type="text" placeholder="entertext" [(ngModel)]="inputText" />
+   <button (click)="submitInput()">Submit</button>
+   <div *ngFor="let i of liList; let j=index">
+  <li>{{i}}</li>
+  <button (click)="delete(j)">Delete</button>
+   </div>
   <router-outlet></router-outlet>

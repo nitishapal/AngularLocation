@@ -17,6 +17,8 @@ export class AppComponent {
   searchedItemList: any = [];
 
   dataList = [];
+  inputText: any;
+  liList: any = [];
 
 
   pieChartOptions: ChartOptions = {
@@ -159,4 +161,20 @@ let obj={};
   // }
 
 
+// let arr = [{'name':'a', 'age':20}, {'name':'b', 'age':21}, {'name':'c', 'age':22}, {'name':'d', 'age':23}];
+// let arr1 = [...arr];
+// let arr2 = JSON.parse(JSON.stringify(arr));
+// arr.map((a) => {
+//   console.log(a);
+
+//   a.city = 'Bangalore'
+//   return {...a, a.city ="blr"}
+// })
+submitInput(){
+this.liList.push(this.inputText);
+
+}
+delete(j){
+  this.liList.splice(j, 1);
+}
 }
